@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/luckdraw/luckdraw"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#FF0000",
+    "backgroundColor": "#eee",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "游戏",
+        "iconPath": "resources/images/nav1.png",
+        "selectedIconPath": "resources/images/nav1a.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "聊天",
+        "iconPath": "resources/images/nav2.png",
+        "selectedIconPath": "resources/images/nav2a.png"
+      },
+      {
+        "pagePath": "pages/luckdraw/luckdraw",
+        "text": "抽奖",
+        "iconPath": "resources/images/nav3.png",
+        "selectedIconPath": "resources/images/nav3a.png"
+      }
+    ]
+  }
+}
