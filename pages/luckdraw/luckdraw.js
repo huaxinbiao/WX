@@ -1,26 +1,62 @@
-Page({
-  canvasIdErrorCallback: function (e) {
-    console.error(e.detail.errMsg)
-  },
-  onReady: function (e) {
-    // 使用 wx.createContext 获取绘图上下文 context
-    var context = wx.createCanvasContext('firstCanvas')
+var Draw = require('../../resources/js/draw.js');
 
-    context.setStrokeStyle("#00ff00")
-    context.setLineWidth(5)
-    context.rect(0, 0, 200, 200)
-    context.stroke()
-    context.setStrokeStyle("#ff0000")
-    context.setLineWidth(2)
-    context.moveTo(160, 100)
-    context.arc(100, 100, 60, 0, 2 * Math.PI, true)
-    context.moveTo(140, 100)
-    context.arc(100, 100, 40, 0, Math.PI, false)
-    context.moveTo(85, 80)
-    context.arc(80, 80, 5, 0, 2 * Math.PI, true)
-    context.moveTo(125, 80)
-    context.arc(120, 80, 5, 0, 2 * Math.PI, true)
-    context.stroke()
-    context.draw()
-  }
+Page({
+    data: {
+        wholeWidth: '',
+        wholeHeight: '',
+        LuckDraw: null
+    },
+    canvasIdErrorCallback: function (e) {
+        console.error(e.detail.errMsg)
+    },
+    onReady: function (e) {
+        var self = this;
+        this.LuckDraw = new Draw({
+            elem: 'firstCanvas',
+            share: [{
+                color: '#f5871f',
+                text: '文字内容1',
+                background: '#ffffff',
+                icon: '../../resources/images/1.png'
+            }, {
+                color: '#1AAD16',
+                text: '文字内容2',
+                background: '#cccccc',
+                icon: '../../resources/images/2.png'
+            }, {
+                color: '#000000',
+                text: '文字内容3',
+                background: '#eeeeee',
+                icon: '../../resources/images/1.png'
+            }, {
+                color: '#333333',
+                text: '文字内容4',
+                background: '#ffffff',
+                icon: '../../resources/images/2.png'
+            }, {
+                color: '#666666',
+                text: '文字内容5',
+                background: '#cccccc',
+                icon: '../../resources/images/1.png'
+            }, {
+                color: '#999999',
+                text: '文字内容6',
+                background: '#eeeeee',
+                icon: '../../resources/images/2.png'
+            }],
+            initsize: function (width, height, callback) {
+                self.setData({
+                    wholeWidth: width + 'px',
+                    wholeHeight: height + 'px'
+                }, function () {
+                    //画布初始化
+                    callback();
+                })
+            }
+        });
+    },
+    start(e){
+        //画布被点击
+        this.LuckDraw.tap(e);
+    }
 })
