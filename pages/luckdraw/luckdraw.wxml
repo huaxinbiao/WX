@@ -1,2 +1,2 @@
 <!--logs.wxml-->
-<canvas style="width: {{wholeWidth}}; height: {{wholeHeight}};" canvas-id="firstCanvas" bind:tap="start"></canvas>
+<canvas calss="tan tan-1" style="width: {{wholeWidth}}; height: {{wholeHeight}};" canvas-id="firstCanvas" bind:tap="start"></canvas>

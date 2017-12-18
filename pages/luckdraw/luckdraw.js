@@ -57,6 +57,6 @@ Page({
     },
     start(e){
         //画布被点击
-        this.LuckDraw.tap(e);
+        //this.LuckDraw.tap(e);
     }
 })
