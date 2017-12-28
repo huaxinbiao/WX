@@ -1,2 +1,10 @@
-<!--logs.wxml-->
-<canvas calss="tan tan-1" style="width: {{wholeWidth}}; height: {{wholeHeight}};" canvas-id="firstCanvas" bind:tap="start"></canvas>
+<view class="section">
+    <image mode="aspectFit" src="../../resources/images/turnplate-bg.png" class="turntable-bg"></image>
+    <view class="share" animation="{{animationData}}">
+        <view wx:for="{{share}}" class="single" wx:key="index" style="transform:rotate({{angle*index}}deg); margin-left: -{{anotherLength}}rpx; border-left-width: {{anotherLength+'rpx'}}; border-right-width: {{anotherLength+'rpx'}}; border-top-color:{{item.background}}">
+            <text class="single-text" style="color:{{item.color}}; width:{{anotherLength*2}}rpx; left:-{{anotherLength}}rpx">{{item.text}}</text>
+            <image class="single-img" mode="aspectFit" src="{{item.icon}}"></image>
+        </view>
+    </view>
+    <image mode="aspectFit" bind:tap="start" src="../../resources/images/turnplate-pointer.png" class="pointer"></image>
+</view>

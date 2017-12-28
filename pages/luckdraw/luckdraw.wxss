@@ -1,21 +1,58 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.section{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
-.log-item {
-  margin: 10rpx;
+.turntable-bg{
+    width: 670rpx;
+    height: 670rpx;
+    margin: 100rpx auto 0;
+    display: block;
+    position: relative;
+    z-index: 1
 }
-.tan{
-    transition: All 0.4s ease-in-out;
-    -webkit-transition: All 0.4s ease-in-out;
-    -moz-transition: All 0.4s ease-in-out;
-    -o-transition: All 0.4s ease-in-out;
+.share{
+    width: 600rpx;
+    height: 600rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 75rpx;
+    top: 135rpx;
+    z-index: 10
 }
-.tan-1{
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
+.single{
+    width:0;
+    height:0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 300rpx solid transparent;
+    border-top: 300rpx solid red;
+    /* transform-origin: center; 定义动画的旋转中心点 */
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.single-text{
+    position: absolute;
+    top: -270rpx;
+    line-height: 24px;
+    font-size: 28rpx;
+    white-space:nowrap;
+    text-align: center;
+}
+.single-img{
+    position: absolute;
+    top: -210rpx;
+    width: 56rpx;
+    height: 56rpx;
+    left: -28rpx;
+}
+.pointer{
+    position: absolute;
+    z-index: 15;
+    top: 286rpx;
+    left: 285rpx;
+    width: 180rpx;
+    height: 240rpx;
 }
