@@ -4,32 +4,32 @@ Page({
     data: {
         share: [{
             color: '#f5871f',
-            text: '文字内容1',
+            text: '奖品1',
             background: '#ffffff',
             icon: '../../resources/images/1.png'
         }, {
             color: '#1AAD16',
-            text: '文字内容2',
+            text: '奖品2',
             background: '#cccccc',
             icon: '../../resources/images/2.png'
         }, {
             color: '#000000',
-            text: '文字内容3',
+            text: '奖品3',
             background: '#eeeeee',
             icon: '../../resources/images/1.png'
         }, {
             color: '#333333',
-            text: '文字内容4',
+            text: '奖品4',
             background: '#ffffff',
             icon: '../../resources/images/2.png'
         }, {
             color: '#666666',
-            text: '文字内容5',
+            text: '奖品5',
             background: '#cccccc',
             icon: '../../resources/images/1.png'
         }, {
             color: '#999999',
-            text: '文字内容6',
+            text: '奖品6',
             background: '#eeeeee',
             icon: '../../resources/images/2.png'
         }],

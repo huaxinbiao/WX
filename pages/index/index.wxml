@@ -1,13 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view>
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login">点击登录</button>
+        <image wx:else class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="box" style="height: {{boxHeight}}px; width: {{boxHeight/2}}px;">
+        <view class="lattice" style="width: {{boxHeight/20}}px; height: {{boxHeight/20}}px"></view>
+    </view>
+    <movable-area style="height: 200px;width: 100%; position: absolute; left:0; bottom:0;">
+        <movable-view class="operation" x="{{x}}" y="{{y}}" direction="all">
+            <view>
+                <image src="../../resources/images/arrow-left.png" class="arrow"></image>
+                <image src="../../resources/images/switch.png" class="arrow switch"></image>
+                <image src="../../resources/images/arrow-right.png" class="arrow"></image>
+            </view>
+            <image src="../../resources/images/arrow-down.png" class="arrow arrow-down"></image>
+        </movable-view>
+    </movable-area>
 </view>
