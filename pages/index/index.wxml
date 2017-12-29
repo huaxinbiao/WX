@@ -5,7 +5,9 @@
         <image wx:else class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     </view>
     <view class="box" style="height: {{boxHeight}}px; width: {{boxHeight/2}}px;">
-        <view class="lattice" style="width: {{boxHeight/20}}px; height: {{boxHeight/20}}px"></view>
+        <block wx:for="{{BoxArray}}" wx:key="item">
+            <view wx:if="{{i == 1}}" wx:for="{{item}}" wx:for-item="i" wx:for-index="key" wx:key="item+i" class="lattice" style="width: {{boxHeight/20}}px; height: {{boxHeight/20}}px; top: {{index*boxHeight/20}}px; left:{{key*boxHeight/20}}px;"></view>
+        </block>
     </view>
     <movable-area style="height: 200px;width: 100%; position: absolute; left:0; bottom:0;">
         <movable-view class="operation" x="{{x}}" y="{{y}}" direction="all">
